@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { categories, productsIn, storeUrl } from '../../lib/catalog.js';
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { slug: c.slug }, props: { category: c } }));
+}
+const { category: c } = Astro.props;
+const items = productsIn(c.slug);
+---
+<Base title={c.name} description={c.description}>
+  <div class="pagehead"><div class="wrap">
+    <div class="crumbs"><a href="/">Home</a> / {c.name}</div>
+    <h1>{c.name}</h1>
+    {c.description && <p>{c.description}</p>}
+  </div></div>
+  <section class="section"><div class="wrap">
+    {items.length ? (
+      <div class="grid">{items.map((p) => <ProductCard product={p} />)}</div>
+    ) : (
+      <div class="notice">
+        <strong>Products for this category haven't been imported yet.</strong>
+        <p style="margin:.5rem 0 1rem">You can still browse them on the current store.</p>
+        <a class="btn" href={storeUrl(c.url)}>View on the current store</a>
+      </div>
+    )}
+  </div></section>
+</Base>

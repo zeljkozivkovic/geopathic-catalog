@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { staticPages, storeUrl } from '../lib/catalog.js';
+
+export function getStaticPaths() {
+  return staticPages.map((p) => ({ params: { page: p.slug }, props: { page: p } }));
+}
+const { page } = Astro.props;
+---
+<Base title={page.title}>
+  <div class="pagehead"><div class="wrap">
+    <div class="crumbs"><a href="/">Home</a> / {page.title}</div>
+    <h1>{page.title}</h1>
+  </div></div>
+  <section class="section"><div class="wrap">
+    <div class="notice">
+      <strong>This page's content hasn't been imported yet.</strong>
+      <p style="margin:.5rem 0 1rem">Paste the text into <code>src/lib/catalog.js</code> (or replace this page) once you have it. Until then you can read it on the current site.</p>
+      <a class="btn" href={storeUrl(page.original)}>Open the original page</a>
+    </div>
+  </div></section>
+</Base>

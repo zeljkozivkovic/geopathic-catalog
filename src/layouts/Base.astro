@@ -1,0 +1,77 @@
+---
+import '../styles/global.css';
+import { site, navigation, categories, staticPages, storeUrl } from '../lib/catalog.js';
+
+const { title, description = 'Tools for protection from geopathic stress and EMFs: harmonizers for homes and businesses, pendants, clearing tools, dowsing supplies and more.' } = Astro.props;
+const fullTitle = title ? `${title} | ${site.name}` : site.name;
+const path = Astro.url.pathname;
+const nav = [
+  { label: 'Shop', href: '/shop/' },
+  { label: 'About us', href: '/about-us/' },
+  { label: 'Shipping & returns', href: '/shipping-and-returns/' },
+  { label: 'Energy testing', href: '/energy-testing/' },
+  { label: 'Testimonials', href: '/testimonials/' },
+  { label: 'Contact us', href: '/contact-us/' },
+];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={new URL(path, Astro.site)} />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%231f5f5b'/><circle cx='16' cy='16' r='7' fill='none' stroke='%23b8893b' stroke-width='2'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="wrap">
+      <a href={storeUrl('/account.php')}>My account</a>
+      <a href={storeUrl('/orderstatus.php')}>Order status</a>
+      <a href={storeUrl('/cart.php')}>View cart</a>
+    </div>
+  </div>
+  <header class="masthead">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#1f5f5b"/><circle cx="17" cy="17" r="8" fill="none" stroke="#b8893b" stroke-width="2"/><path d="M2 17h30M17 2v30" stroke="#b8893b" stroke-width="1" opacity=".6"/></svg>
+        {site.name}
+      </a>
+      <nav class="nav" aria-label="Main">
+        {nav.map((n) => <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>)}
+      </nav>
+    </div>
+  </header>
+
+  <main id="main"><slot /></main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="newsletter">
+        <h3>Our newsletter</h3>
+        <p>Updates on new tools and articles about earth energies.</p>
+        <!-- TODO: connect to your email provider (Mailchimp, Buttondown, etc.) -->
+        <form action="#" method="post">
+          <input type="text" name="first_name" placeholder="First name" aria-label="First name" />
+          <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div>
+        <h3>Categories</h3>
+        <ul>{categories.map((c) => <li><a href={`/categories/${c.slug}/`}>{c.name}</a></li>)}</ul>
+      </div>
+      <div>
+        <h3>Information</h3>
+        <ul>{staticPages.map((p) => <li><a href={`/${p.slug}/`}>{p.title}</a></li>)}</ul>
+      </div>
+    </div>
+    <div class="wrap legal">All prices are in USD. Copyright 2026 {site.name}.</div>
+  </footer>
+</body>
+</html>

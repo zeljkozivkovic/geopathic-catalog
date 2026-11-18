@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { categories, products, countIn } from '../lib/catalog.js';
+const withProducts = categories.filter((c) => countIn(c.slug));
+---
+<Base title="Shop" description="All products from Geopathic Stress Solutions.">
+  <div class="pagehead"><div class="wrap">
+    <div class="crumbs"><a href="/">Home</a> / Shop</div>
+    <h1>All products</h1>
+  </div></div>
+  <section class="section"><div class="wrap">
+    <div class="shop-tools">
+      <input id="q" type="search" placeholder="Search products" aria-label="Search products" />
+      <select id="cat" aria-label="Filter by category">
+        <option value="">All categories</option>
+        {withProducts.map((c) => <option value={c.slug}>{c.name}</option>)}
+      </select>
+      <select id="sort" aria-label="Sort">
+        <option value="">Default order</option>
+        <option value="asc">Price: low to high</option>
+        <option value="desc">Price: high to low</option>
+      </select>
+    </div>
+    <p id="empty" hidden>No products match. Try a different search or category.</p>
+    <div class="grid" id="grid">{products.map((p) => <ProductCard product={p} />)}</div>
+  </div></section>
+</Base>
+<script>
+  const grid = document.getElementById('grid')!;
+  const cards = [...grid.children] as HTMLElement[];
+  const q = document.getElementById('q') as HTMLInputElement;
+  const cat = document.getElementById('cat') as HTMLSelectElement;
+  const sort = document.getElementById('sort') as HTMLSelectElement;
+  const empty = document.getElementById('empty')!;
+  function update() {
+    const term = q.value.trim().toLowerCase();
+    let shown = 0;
+    cards.forEach((c) => {
+      const ok = (!term || c.dataset.name!.includes(term)) && (!cat.value || c.dataset.cats!.split(' ').includes(cat.value));
+      c.hidden = !ok; if (ok) shown++;
+    });
+    empty.hidden = shown > 0;
+    if (sort.value) {
+      const dir = sort.value === 'asc' ? 1 : -1;
+      [...cards].sort((a, b) => dir * (Number(a.dataset.price) - Number(b.dataset.price))).forEach((c) => grid.appendChild(c));
+    } else cards.forEach((c) => grid.appendChild(c));
+  }
+  [q, cat, sort].forEach((el) => el.addEventListener('input', update));
+  const params = new URLSearchParams(location.search);
+  if (params.get('q')) { q.value = params.get('q')!; update(); }
+</script>

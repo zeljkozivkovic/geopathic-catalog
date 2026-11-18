@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { products, categories, money, largeImage, storeUrl } from '../../lib/catalog.js';
+
+export function getStaticPaths() {
+  return products.map((p) => ({ params: { slug: p.slug }, props: { product: p } }));
+}
+const { product: p } = Astro.props;
+const cats = categories.filter((c) => p.categories.includes(c.slug));
+const related = products.filter((o) => o.slug !== p.slug && o.categories.some((c) => p.categories.includes(c))).slice(0, 4);
+const desc = p.snippet.replace(/\.\.\.$/, '…');
+---
+<Base title={p.name} description={desc}>
+  <div class="pagehead"><div class="wrap">
+    <div class="crumbs">
+      <a href="/">Home</a> / <a href={`/categories/${cats[0].slug}/`}>{cats[0].name}</a> / {p.name}
+    </div>
+  </div></div>
+  <section class="section"><div class="wrap">
+    <div class="pdp">
+      <div class="shot">
+        <img src={largeImage(p.image)} data-fallback={p.image} alt={p.name} onerror="this.onerror=null;this.src=this.dataset.fallback" />
+      </div>
+      <div>
+        <h1 style="font-size:clamp(1.8rem,3.5vw,2.6rem)">{p.name}</h1>
+        <div class="price">{money(p.price)}</div>
+        <p>{desc}</p>
+        <div class="notice">
+          The full description is still being imported. Until then, the complete details and checkout are on the current store.
+        </div>
+        <a class="btn" href={storeUrl(p.url)}>View and buy on the store</a>
+      </div>
+    </div>
+  </div></section>
+  {related.length > 0 && (
+    <section class="section" style="padding-top:0"><div class="wrap">
+      <h2>More from this category</h2>
+      <div class="grid">{related.map((r) => <ProductCard product={r} />)}</div>
+    </div></section>
+  )}
+</Base>

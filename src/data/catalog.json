@@ -1,0 +1,297 @@
+{
+  "site": {
+    "name": "Geopathic Stress Solutions",
+    "url": "https://www.geopathic-stress-solutions.com/",
+    "platform": "BigCommerce (theme: ArtFraming)",
+    "currency": "USD",
+    "footer": "All prices are in USD. Copyright 2026 Geopathic Stress Solutions."
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "About Us",
+      "url": "/about-us/"
+    },
+    {
+      "label": "Gift Certificates",
+      "url": "/giftcertificates.php"
+    },
+    {
+      "label": "Shipping & Returns",
+      "url": "/shippingandreturns"
+    },
+    {
+      "label": "Energy testing",
+      "url": "/pages/Newsletter.html"
+    },
+    {
+      "label": "Testimonials",
+      "url": "/testimonials/"
+    },
+    {
+      "label": "Contact Us",
+      "url": "/pages/Contact-Us.html"
+    }
+  ],
+  "categories": [
+    {
+      "slug": "home-business-harmonizers",
+      "name": "Home & Business Harmonizers",
+      "url": "/home-business-harmonizers/",
+      "scraped": true,
+      "description": "Energetic protection from environmental energies (Geopathic Stress, EMFs), from close neighbors, and effective remedies for typical Feng Shui challenges for the home, apartment or business and all the people who live and work there.",
+      "blurb": "Energetic protection for your home, apartment and business from geopathic stress (caused by underground water veins, earth fault-lines and multiple grid systems), EMF/electro-magnetic stress from cellphones, computers and wireless electronics, as well as neutralization of many Feng Shui challenges such as missing areas in the Bagua, cutting Chi from sharp corners, sloped ceilings, etc."
+    },
+    {
+      "slug": "personal-protection",
+      "name": "Personal Protection",
+      "url": "/personal-protection/",
+      "scraped": true,
+      "description": "Protection from Geopathic Stress and EMF's (electromagnetic fields) and additional Chi for the individual user.",
+      "blurb": "Individual protection from geopathic and EMF related stress, from intrusive energies of negative people, as well as from higher dimensional beings in the form of our latest product, the Universal Shield. The pendants in general increase grounding and connection to the Earth and with that boost physical balance."
+    },
+    {
+      "slug": "ascension-tools",
+      "name": "Ascension Tools",
+      "url": "/ascension-tools/",
+      "scraped": false,
+      "description": "",
+      "blurb": ""
+    },
+    {
+      "slug": "bioresonance-laser",
+      "name": "BioResonance Laser",
+      "url": "/categories/BioResonance-Laser/",
+      "scraped": false,
+      "description": "Embedded informational frequencies on a photon laser beam to maximize the energy in water and food and activate original blueprint information.",
+      "blurb": "Embedded informational frequencies on a photon laser beam to maximize the energy in water and food and activate original blueprint information."
+    },
+    {
+      "slug": "emf-protectors",
+      "name": "EMF Protectors",
+      "url": "/emf-protectors/",
+      "scraped": false,
+      "description": "Counteracting EMF-related stress from cellphones, cordless phones, laptops, Wifi routers and all other electronics.",
+      "blurb": "Counteracting EMF-related stress from cellphones, cordless phones, laptops, Wifi routers and all other electronics."
+    },
+    {
+      "slug": "clearing-harmonizers",
+      "name": "Clearing Harmonizers",
+      "url": "/clearing-harmonizers/",
+      "scraped": false,
+      "description": "A set of tools to assist with clearing negative energetic residue from objects. Quick and easy results. Ideal for clearing small spaces, beds and rooms in hotels, hospitals, chairs of health practitioners and therapists, unpleasant energy on money, crystals and old jewelry, pre-owners' energy on antiques and used items, such as clothes and even vehicles. Distinct Harmonizers clear negative energetic imprints from water and from mass produced food.",
+      "blurb": "A set of tools to assist with clearing negative energetic residue from objects. Quick and easy results. Ideal for clearing small spaces, beds and rooms in hotels, hospitals, chairs of health practitioners and therapists, unpleasant energy on money, crystals and old jewelry, pre-owners' energy on antiques and used items, such as clothes and even vehicles. Distinct Harmonizers clear negative energetic imprints from water and from mass produced food."
+    },
+    {
+      "slug": "pet-products",
+      "name": "Pet Products",
+      "url": "/pet-products/",
+      "scraped": false,
+      "description": "",
+      "blurb": ""
+    },
+    {
+      "slug": "scalar-tools-for-practitioners",
+      "name": "Scalar Tools for Practitioners",
+      "url": "/scalar-tools-for-practitioners/",
+      "scraped": false,
+      "description": "Scalar Tools for professionals and ambitious individuals to release traumas imprinted in our cellular memory and to heal emotional scars in a person's aura field. Reports include improved sleep, more energy, better relationships, reduced anxiety and worry, overall an increase in happiness.",
+      "blurb": "Scalar Tools for professionals and ambitious individuals to release traumas imprinted in our cellular memory and to heal emotional scars in a person's aura field. Reports include improved sleep, more energy, better relationships, reduced anxiety and worry, overall an increase in happiness."
+    },
+    {
+      "slug": "e-books-and-audios",
+      "name": "E-Books and Audios",
+      "url": "/e-books-and-audios/",
+      "scraped": false,
+      "description": "Books, workbooks and audio CD's on the topics of earth energies, dowsing, geopathic stress, electromagnetic frequencies (EMFs) and Feng Shui in digital format for easy download.",
+      "blurb": "Books, workbooks and audio CD's on the topics of earth energies, dowsing, geopathic stress, electromagnetic frequencies (EMFs) and Feng Shui in digital format for easy download."
+    },
+    {
+      "slug": "dowsing-supplies",
+      "name": "Dowsing Supplies",
+      "url": "/dowsing-supply-e-books/",
+      "scraped": false,
+      "description": "High quality dowsing instruments to detect Geopathic Stress and to test for energetic changes.",
+      "blurb": "High quality dowsing instruments to detect Geopathic Stress and to test for energetic changes."
+    },
+    {
+      "slug": "personal-consultations",
+      "name": "Personal Consultations",
+      "url": "/personal-consultations/",
+      "scraped": false,
+      "description": "Sessions with Werner in person or over the phone.",
+      "blurb": "Sessions with Werner in person or over the phone."
+    }
+  ],
+  "products": [
+    {
+      "slug": "home-harmonizer-v-7-the-new-standard-of-geopathic-stress-pro",
+      "name": "Home Harmonizer V.7 - the new standard of Geopathic Stress Protection",
+      "price": 479,
+      "categories": [
+        "home-business-harmonizers"
+      ],
+      "url": "/home-harmonizer-v-7-the-new-standard-of-geopathic-stress-protection/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/30/images/556/HH_V7-12_med_1__86088.1646405537.120.120.jpg?c=2",
+      "snippet": "The Home Harmonizer V.7 with the new Chi-booster is the trusted tool for buildings and apartments to neutralize Geopathic Stress, reduce EMFs, and balance numerous Feng Shui challenges. It imprints a higher..."
+    },
+    {
+      "slug": "business-harmonizer-v-7-in-gold-for-offices-shops-and-busine",
+      "name": "Business Harmonizer V.7 in Gold for Offices, Shops and Businesses",
+      "price": 888,
+      "categories": [
+        "home-business-harmonizers"
+      ],
+      "url": "/business-harmonizer-v-7-in-gold-for-offices-shops-and-businesses/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/85/images/567/BH_V7-12_med1__01116.1646482592.120.120.jpg?c=2",
+      "snippet": "The BUSINESS HARMONIZER V.7 IN GOLD combines the boost of Chi for a business with all the protective features of the Home Harmonizer. It has been developed to strengthen business related energies and to increase revenue for..."
+    },
+    {
+      "slug": "home-harmonizer-ultra-v-7-added-entity-protection-for-the-ho",
+      "name": "Home Harmonizer ULTRA V.7 - added Entity Protection for the Home",
+      "price": 679,
+      "categories": [
+        "home-business-harmonizers"
+      ],
+      "url": "/home-harmonizer-ultra-v-7-added-entity-protection-for-the-home/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/107/images/566/HH_Ultra_V7-12_med_2__69011.1646411660.120.120.jpg?c=2",
+      "snippet": "The Home Harmonizer ULTRA V.7 neutralizes geopathic stress, reduces electromagnetic fields and most importantly, it shields a space from negative vibrational beings such as entities, higher dimensional beings,..."
+    },
+    {
+      "slug": "business-harmonizer-ultra-v-7-in-gold-for-offices-and-busine",
+      "name": "Business Harmonizer ULTRA V.7 in Gold for Offices and Businesses - NEW",
+      "price": 1088,
+      "categories": [
+        "home-business-harmonizers"
+      ],
+      "url": "/business-harmonizer-ultra-v-7-in-gold-for-offices-and-businesses-new/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/117/images/554/BH_Ultra_V7-12_sm_1__23451.1644950359.120.120.jpg?c=2",
+      "snippet": "The BUSINESS HARMONIZER ULTRA V.7 IN GOLD offers spiritual protection on top of energetic shielding for an office, shop or business combined with a significant boost of Chi. The ULTRA version extends the protective..."
+    },
+    {
+      "slug": "room-harmonizer-v-7",
+      "name": "Room Harmonizer V.7",
+      "price": 249,
+      "categories": [
+        "home-business-harmonizers"
+      ],
+      "url": "/room-harmonizer-v-7/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/67/images/569/RH_V7-12_med_3__06827.1646414540.120.120.jpg?c=2",
+      "snippet": "The Room Harmonizer V.7 is a smaller mobile version of the Home Harmonizer and protects a single room such as a studio apartment, student's dorm or a small office from environmental energies (Geopathic Stress and..."
+    },
+    {
+      "slug": "practitioner-package",
+      "name": "Practitioner Package",
+      "price": 319,
+      "categories": [
+        "home-business-harmonizers"
+      ],
+      "url": "/practitioner-package/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/66/images/338/Practitioner_combo_2a_jpg__18362.1382105396.120.120.jpg?c=2",
+      "snippet": "This package offers environmental energy protection by combining Geopathic stress and EMF stress reduction with easy space clearing for a room full of patients. Ideal for health practitioners, massage therapists or energy..."
+    },
+    {
+      "slug": "student-package",
+      "name": "Student Package",
+      "price": 379,
+      "categories": [
+        "home-business-harmonizers"
+      ],
+      "url": "/student-package/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/87/images/393/student_special_jpg__32683.1413823345.120.120.jpg?c=2",
+      "snippet": "Students are extremely exposed to EMFs using multiple electronic devices themselves, as well as being around large groups of other technology users on campus. The Room Harmonizer V.7 calms down the chaotic energy fields in a..."
+    },
+    {
+      "slug": "office-package",
+      "name": "Office Package",
+      "price": 389,
+      "categories": [
+        "home-business-harmonizers"
+      ],
+      "url": "/office-package/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/68/images/337/Practitioner_combo_3a_jpg__90808.1382105287.120.120.jpg?c=2",
+      "snippet": "This combo provides the best energetic protection for small offices by combining Geopathic stress protection and EMF stress neutralization with our new Space Clearing device. Ideal for office workers to protect their..."
+    },
+    {
+      "slug": "student-plus-package",
+      "name": "Student PLUS Package",
+      "price": 697,
+      "categories": [
+        "home-business-harmonizers",
+        "personal-protection"
+      ],
+      "url": "/student-PLUS-package/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/88/images/395/student_PLUS_special_jpg__49566.1414166131.120.120.jpg?c=2",
+      "snippet": "This package provides best individual energetic protection for students in their dorm and study hall, but is also recommended for anybody who is concerned that their work environment and the increasing use of electronics in..."
+    },
+    {
+      "slug": "bioresonance-chi-pendant-basic-protection",
+      "name": "BioResonance Chi Pendant - Basic Protection",
+      "price": 249,
+      "categories": [
+        "personal-protection"
+      ],
+      "url": "/bioresonance-chi-pendant-basic-protection/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/36/images/169/bioresonance-chi2__56722.1291537460.120.120.jpg?c=2",
+      "snippet": "The BioResonance CHI Pendant provides basic energetic protection from stress in the environment. It combines protection from Geopathic stress from underground waterveins, earth fault lines and natural grid systems..."
+    },
+    {
+      "slug": "bioresonance-pro-pendant-advanced-environmental-protection",
+      "name": "BioResonance PRO Pendant - Advanced environmental Protection",
+      "price": 379,
+      "categories": [
+        "personal-protection"
+      ],
+      "url": "/bioresonance-pro-pendant-advanced-environmental-protection/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/102/images/465/bioresonance-pro2__54205.1486519549.120.120.jpg?c=2",
+      "snippet": "The BioResonance PRO Pendant in Sterling Silver is the preferred choice for individuals looking for comprehensive protection against all types of environmental stress including EMF related challenges..."
+    },
+    {
+      "slug": "bioresonance-pro-pendant-in-gold-inner-balance-well-being",
+      "name": "BioResonance PRO Pendant in Gold - Inner Balance & Well-Being",
+      "price": 699,
+      "categories": [
+        "personal-protection"
+      ],
+      "url": "/bioresonance-pro-pendant-in-gold-inner-balance-well-being/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/101/images/474/PRO_gold_3_sm__02184.1487018262.120.120.jpg?c=2",
+      "snippet": "The BioResonance PRO Pendant in Gold is an advanced and transformational tool. It combines the protection against environmental influences of the silver PRO pendant with balancing qualities of 24 carat gold for a..."
+    },
+    {
+      "slug": "bioresonance-pro-pendant-in-rose-gold-heart-space-relationsh",
+      "name": "BioResonance PRO Pendant in Rose Gold - Heart Space & Relationships",
+      "price": 699,
+      "categories": [
+        "personal-protection"
+      ],
+      "url": "/bioresonance-pro-pendant-in-rose-gold-heart-space-relationships/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/98/images/484/PRO_rosegold_1_sm_jpg__98270.1487532091.120.120.jpg?c=2",
+      "snippet": "The BioResonance PRO Pendant in Champagne Rose Gold focuses on increasing a person's heart space. It strengthens relationships on both physical and spiritual levels. It is energetically very..."
+    },
+    {
+      "slug": "universal-shield-in-silver-entity-protection-for-the-individ",
+      "name": "Universal Shield in Silver - Entity Protection for the Individual",
+      "price": 559,
+      "categories": [
+        "personal-protection"
+      ],
+      "url": "/universal-shield-in-silver-entity-protection-for-the-individual/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/105/images/544/US_silver_6_sm__47624.1547242780.120.120.jpg?c=2",
+      "snippet": "The Universal Shield in Sterling Silver with Amethyst adds protection against negative vibrational beings and entities to the advanced environmental stress shielding of the silver BioResonance PRO pendant..."
+    },
+    {
+      "slug": "universal-shield-in-rose-gold-complete-protection-for-the-li",
+      "name": "Universal Shield in Rose Gold - Complete Protection for the Lightworker",
+      "price": 859,
+      "categories": [
+        "personal-protection"
+      ],
+      "url": "/universal-shield-in-rose-gold-complete-protection-for-the-lightworker/",
+      "image": "https://cdn2.bigcommerce.com/server500/51e27/products/104/images/543/US_rose_gold_6_sm__43416.1547242783.120.120.jpg?c=2",
+      "snippet": "The Universal Shield in Champagne Rose Gold with Amethyst is the most advanced energetic shield available today. It is individually calibrated to the user and has been designed specifically for Healers and..."
+    }
+  ]
+}

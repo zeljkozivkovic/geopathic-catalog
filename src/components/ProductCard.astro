@@ -1,0 +1,14 @@
+---
+import { money, largeImage } from '../lib/catalog.js';
+const { product: p } = Astro.props;
+---
+<article class="card" data-name={p.name.toLowerCase()} data-cats={p.categories.join(' ')} data-price={p.price}>
+  <a class="pic" href={`/products/${p.slug}/`} tabindex="-1" aria-hidden="true">
+    <img src={largeImage(p.image)} data-fallback={p.image} alt="" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" />
+  </a>
+  <div class="body">
+    <h3><a href={`/products/${p.slug}/`}>{p.name}</a></h3>
+    <p>{p.snippet}</p>
+    <div class="price">{money(p.price)}</div>
+  </div>
+</article>

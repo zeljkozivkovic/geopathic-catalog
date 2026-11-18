@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { categories, products, countIn, money, largeImage } from '../lib/catalog.js';
+
+const featured = products.find((p) => p.slug.startsWith('universal-shield-in-silver')) ?? products[0];
+const picks = ['home-harmonizer-v-7', 'bioresonance-pro-pendant-advanced', 'room-harmonizer-v-7', 'office-package']
+  .map((s) => products.find((p) => p.slug.startsWith(s))).filter(Boolean);
+---
+<Base>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Protect the places where you live, work and rest from geopathic stress and EMFs.</h1>
+        <p>Harmonizers for homes and businesses, pendants for personal protection, clearing tools, dowsing supplies and consultations.</p>
+        <div class="hero-actions">
+          <a class="btn" href="/shop/">Browse all products</a>
+          <a class="btn ghost" href="/categories/home-business-harmonizers/">Home & business harmonizers</a>
+        </div>
+      </div>
+      <a class="hero-product" href={`/products/${featured.slug}/`}>
+        <img src={largeImage(featured.image)} data-fallback={featured.image} alt={featured.name} onerror="this.onerror=null;this.src=this.dataset.fallback" />
+        <strong>{featured.name}</strong>
+        <span>{money(featured.price)}</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Shop by category</h2>
+      <div class="cat-grid">
+        {categories.map((c) => (
+          <a class="cat" href={`/categories/${c.slug}/`}>
+            <h3>{c.name}</h3>
+            <p>{c.blurb || 'Products in this category are being added.'}</p>
+            <small>{countIn(c.slug) ? `${countIn(c.slug)} products` : 'View category'}</small>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <h2>Popular products</h2>
+      <div class="grid">{picks.map((p) => <ProductCard product={p} />)}</div>
+    </div>
+  </section>
+</Base>
